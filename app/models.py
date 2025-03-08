@@ -1,6 +1,5 @@
 from . import db
 
-
 class UserProfile(db.Model):
     # You can use this to change the table name. The default convention is to use
     # the class name. In this case a class name of UserProfile would create a
@@ -12,7 +11,7 @@ class UserProfile(db.Model):
     first_name = db.Column(db.String(80))
     last_name = db.Column(db.String(80))
     username = db.Column(db.String(80), unique=True)
-
+    
     def is_authenticated(self):
         return True
 
